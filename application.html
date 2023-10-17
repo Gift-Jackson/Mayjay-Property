@@ -9,6 +9,75 @@
     <link rel="stylesheet" href="application.css">
     <!-- MATERIAL ICON -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <style>
+        /* Overlay */
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100%;
+            background-color: rgba(0, 0, 0, .7);
+            display: grid;
+            place-items: center;
+        }
+
+        .overlay .modal {
+            background-color: #fefefe;
+            width: 400px;
+            padding: 2rem 1rem;
+            position: relative;
+            transform: scale(0);
+            animation: modal .2s linear .2s forwards;
+        }
+
+        @keyframes modal {
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .overlay .modal h1 {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .overlay .modal .btns {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .overlay .modal .btns button {
+            padding: .7rem 1rem;
+            cursor: pointer;
+        }
+
+        .overlay .modal .btns .close-btn {
+            border: 1px solid crimson;
+            background-color: transparent;
+            color: crimson;
+        }
+
+        .overlay .modal .btns .open-btn {
+            border: 0;
+            background-color: crimson;
+            color: #fefefe;
+        }
+
+        .overlay .modal .btns .open-btn:hover {
+            filter: brightness(80%);
+        }
+
+        .overlay .modal .close {
+            position: absolute;
+            top: .7rem;
+            right: 1rem;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
@@ -33,10 +102,10 @@
     <main>
         <section class="rentals-form">
             <h1>Rentals Application <span class="mark">Form</span></h2>
-                <form action="https://formsubmit.io/send/3ab37bd0-5017-4164-aecc-b56a64309f84" method="POST">
+                <form action="https://formsubmit.io/send/realtorpatterson15@gmail.com" method="POST">
 
                     <input name="_redirect" type="hidden" id="name"
-                        value="https://mayjaypropertymanagement.netlify.app/success.html">
+                        value="https://forreal.netlify.app/payment-success.html">
 
 
                     <label for="fullname">Fullname:</label>
@@ -79,32 +148,41 @@
                     </select>
 
                     <label>Other Occupants?</label><br>
-                    <label><input class="check" type="radio" name="other_occupant" id="other_occupan" value="Yes"> Yes</label>&nbsp;&nbsp;&nbsp;
-                    <label><input class="check" type="radio" name="other_occupant" id="other_occupan" value="No"> No</label><br><br>
+                    <label><input class="check" type="radio" name="other_occupant" id="other_occupan" value="Yes">
+                        Yes</label>&nbsp;&nbsp;&nbsp;
+                    <label><input class="check" type="radio" name="other_occupant" id="other_occupan" value="No">
+                        No</label><br><br>
 
                     <label for="phone">Emergency Contact:</label>
-                    <input class="input" type="tel" id="emergency_contact" name="emergency_contact" value="+1 " required>
+                    <input class="input" type="tel" id="emergency_contact" name="emergency_contact" value="+1 "
+                        required>
 
                     <label for="fee">Application Fee:</label>
                     <input class="input" type="text" id="fee" name="fee" value="$200" readonly>
 
                     <label for="agent">Real Estate Agent:</label>
-                    <input class="input" type="text" id="agent" name="agent" value="Realtor Alexander Patterson" readonly>
+                    <input class="input" type="text" id="agent" name="agent" value="Realtor Alexander Patterson"
+                        readonly>
 
                     <label>Do you have a pet?</label><br>
-                    <label><input class="check" type="radio" name="pet" id="pet" value="Yes"> Yes</label>&nbsp;&nbsp;&nbsp;
+                    <label><input class="check" type="radio" name="pet" id="pet" value="Yes">
+                        Yes</label>&nbsp;&nbsp;&nbsp;
                     <label><input class="check" type="radio" name="pet" id="pet" value="No"> No</label><br><br>
 
                     <label>Do you smoke?</label><br>
-                    <label><input class="check" type="radio" name="smoke" id="smoke" value="Yes"> Yes</label>&nbsp;&nbsp;&nbsp;
+                    <label><input class="check" type="radio" name="smoke" id="smoke" value="Yes">
+                        Yes</label>&nbsp;&nbsp;&nbsp;
                     <label><input class="check" type="radio" name="smoke" id="smoke" value="No"> No</label><br><br>
 
                     <label>Are you an ex-convict?</label><br>
-                    <label><input class="check" type="radio" name="ex_convict" id="ex_convict" value="Yes"> Yes</label>&nbsp;&nbsp;&nbsp;
-                    <label><input class="check" type="radio" name="ex_convict" id="ex_convict" value="No"> No</label><br><br>
+                    <label><input class="check" type="radio" name="ex_convict" id="ex_convict" value="Yes">
+                        Yes</label>&nbsp;&nbsp;&nbsp;
+                    <label><input class="check" type="radio" name="ex_convict" id="ex_convict" value="No">
+                        No</label><br><br>
 
                     <label>Any Voucher?</label><br>
-                    <label><input class="check" type="radio" name="voucher" id="voucher" value="Yes"> Yes</label>&nbsp;&nbsp;&nbsp;
+                    <label><input class="check" type="radio" name="voucher" id="voucher" value="Yes">
+                        Yes</label>&nbsp;&nbsp;&nbsp;
                     <label><input class="check" type="radio" name="voucher" id="voucher" value="No"> No</label><br><br>
 
                     <label for="current-residence">Why are you leaving your current residence?</label>
@@ -140,8 +218,42 @@
         </div>
     </div>
 
+    <!-- Modal -->
+    <div class="overlay">
+        <div class="modal">
+            <h1>Application Fee <span class="mark">Policy</span></h1>
+            <p>Do you want to read the Application Fee Policy now?</p>
+            <div class="btns">
+                <button class="close-btn">Already did!</button>
+                <button class="close-btn">No, later!</button>
+                <button class="open-btn">Yes, sure!</button>
+
+            </div>
+            <span class="material-symbols-outlined close close-btn">
+                close
+            </span>
+        </div>
+    </div>
+
     <!-- script -->
     <script src="js/main.js"></script>
+    <script>
+        const overlay = document.querySelector(".overlay");
+        const closeBtn = document.querySelectorAll(".close-btn");
+        const openBtn = document.querySelector(".open-btn");
+
+
+
+        closeBtn.forEach((closeModal) => {
+            closeModal.addEventListener("click", () => {
+                overlay.style.display = "none";
+            });
+        });
+
+        openBtn.addEventListener("click", () => {
+            window.open("index.html");
+        })
+    </script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
 </body>
 
