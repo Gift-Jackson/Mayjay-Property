@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayjay Property Management</title>
+    <!-- SYTLESHEET -->
+    <link rel="stylesheet" href="style.css">
+    <!-- MATERIAL ICON -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+
+<body>
+    <section class="hero-container">
+        <header>
+            <div class="brand">
+                <i class="material-symbols-outlined">real_estate_agent</i>
+                <p>Mayjay<span class="mark">.</span></p>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a class="current" href="#">Home</a></li>
+                    <li><a href="application.html">Apply Now</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="toggle-box">
+                <div class="bar"></div>
+            </div>
+        </header>
+
+        <div class="main-hero">
+            <h1>mayjay property <br>management</h1>
+            <p>Welcome to our real estate agency. We are here to help you find the perfect home or property that meets
+                your needs.</p>
+            <a href="application.html">
+                <button class="btn hero-btn">
+                    <span class="btn-text">Apply Now</span>
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <main>
+        <section id="about" class="heading">
+            <h1>About <span class="mark">Us</span></h1>
+            <div class="wrapper">
+                <article>
+                    <p>Welcome to Mayjay Property! We are a dedicated team of real estate professionals committed to
+                        helping you find your dream home or property. With years of experience in the industry, we have
+                        assisted countless clients in making informed decisions and finding the perfect place to call
+                        home.</p>
+                    <p>Our mission is to provide exceptional service and support to our clients throughout their real
+                        estate journey. We understand that buying or selling a property is a significant decision, and
+                        we aim to make the process as smooth and stress-free as possible.</p>
+
+                    <div class="profile">
+                        <table>
+                            <tr>
+                                <td><p><span class="mark">Realtor in contact:</span></h3></td>
+                                <td><p>Alexander Patterson</p></td>
+                            </tr>
+                            <tr>
+                                <td><p><span class="mark">License Number:</span></p></td>
+                                <td><p>10311206148</p></td>
+                            </tr>
+                        </table>
+                    </div>    
+
+                    <a href="application.html">
+                        <button class="btn hero-btn">
+                            <span class="btn-text">Apply Now</span>
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                    </a>
+                </article>
+
+                <figure>
+                    <img src="img/about.svg" alt="About_svg">
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <main>
+        <section class="heading">
+            <h1>Why Choose <span class="mark">Mayjay</span>?</h1>
+
+            <div class="boxes">
+                <ul>
+                    <li><b>Extensive Knowledge:</b> Our team possesses an in-depth understanding of the local real
+                        estate
+                        market.
+                        We stay updated with the latest trends, prices, and available properties to offer you the best
+                        options.</li>
+                    <li><b>Personalized Approach:</b> We believe in tailoring our services to meet your unique
+                        requirements.
+                        Whether you're a first-time homebuyer or an experienced investor, we'll work closely with you to
+                        achieve your goals.</li>
+                    <li><b>Professionalism:</b> Trust and integrity are at the core of our values. You can rely on us to
+                        provide
+                        honest advice and transparent communication throughout the process.</li>
+                    <li><b>Extensive Listings:</b> We maintain an extensive database of properties, including houses,
+                        apartments,
+                        condos, and more. Whatever your preferences, we have listings to match your needs.</li>
+                    <li><b>Expert Negotiation:</b> When it comes to negotiating the best deal, our experienced agents
+                        are
+                        skilled
+                        at getting you the most favorable terms, whether you're buying or selling.</li>
+                    <li><b>Supportive Team:</b> Our team is here to support you every step of the way. From property
+                        search
+                        to
+                        closing, we'll handle the details, so you can focus on your real estate goals.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <main>
+        <section class="heading">
+            <h1>Application Fee <span class="mark">Policy</span></h1>
+            <div class="content">
+                <p>The <span class="mark">Two Hundred Dollars ($200)</span> application fee is for the processing
+                    of the application, for neccessary background checks, criminal/eviction records and charges for
+                    Apartment tour.
+                    The fee helps you secure the apartment for possible owners consideration for acceptance of your
+                    rent. <br><br>
+                    The <span class="mark">$200</span> is fully refundable upon viewing if applicant is denied rental or
+                    no
+                    longer
+                    interested in the said apartment or any other available listings at the time of viewing.
+                    The fee is to be given to the agent in contact to ensure proper documentation and the quick
+                    processing
+                    and
+                    approval of your application.
+                </p>
+
+                <a href="application.html">
+                    <button class="btn hero-btn"><span class="btn-text">Apply Now</span> <span
+                            class="material-symbols-outlined">arrow_forward</span></button>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Contact -->
+    <main>
+        <section id="contact" class="heading">
+            <h1>Contact <span class="mark">Us</span></h1>
+
+            <div class="contact-box">
+                <form id="contactform" action="https://formsubmit.io/send/eab0ec84-4af3-4b0a-8e70-731cfff3cd0b"
+                    method="POST">
+                    <input name="_redirect" type="hidden" id="name"
+                        value="https://forreal.netlify.app/contact-success.html">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit" class="btn btn-5">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Mayjay Property Management Copyrights &copy; 2023</p>
+    </footer>
+
+    <!-- Loader -->
+    <div class="loader">
+        <div class="loader-box">
+            <div class="circle"></div>
+            <div class="brand">
+                <span class="material-symbols-outlined">real_estate_agent</span>
+                <p>Mayjay Property</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- script -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

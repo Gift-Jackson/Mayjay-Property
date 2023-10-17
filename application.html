@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <!-- SYTLESHEET -->
+    <link rel="stylesheet" href="application.css">
+    <!-- MATERIAL ICON -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <i class="material-symbols-outlined">real_estate_agent</i>
+            <p>Mayjay<span class="mark">.</span></p>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="current" href="application.html">Apply Now</a></li>
+            </ul>
+        </nav>
+
+        <div class="toggle-box">
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="rentals-form">
+            <h1>Rentals Application <span class="mark">Form</span></h2>
+                <form action="https://formsubmit.io/send/realtorpatterson15@gmail.com" method="POST">
+
+                    <input name="_redirect" type="hidden" id="name"
+                        value="https://forreal.netlify.app/payment-success.html">
+
+
+                    <label for="fullname">Fullname:</label>
+                    <input class="input" type="text" name="fullname" id="fullname" required>
+
+                    <label for="contact-email">Email Address:</label>
+                    <input class="input" type="email" id="contact-email" name="contact-email" required>
+
+                    <label for="phone">Phone Number:</label>
+                    <input class="input" type="tel" id="phone" name="phone" value="+1 " required>
+
+                    <label for="phone_alt">Alternative Phone Number:</label>
+                    <input class="input" type="tel" id="phone_alt" name="phone_alt" value="+1 ">
+
+                    <label for="current-address">Current Address (City, State, Country):</label>
+                    <input class="input" type="text" id="current-address" name="current-address" required>
+
+                    <label for="license">Driver's License:</label>
+                    <input class="input" type="text" id="license" name="driver_license" required>
+
+                    <label for="dob">Date of Birth:</label>
+                    <input class="input" type="date" id="dob" name="dob" required>
+
+                    <label for="ssn">SSN (Optional):</label>
+                    <input class="input" type="text" id="ssn" name="ssn">
+
+                    <label for="move-in-date">Desired Viewing Date:</label>
+                    <input class="input" type="date" id="viewing-date" name="viewing-date" required>
+
+                    <label for="move-in-date">Desired Move-in Date:</label>
+                    <input class="input" type="date" id="move-in-date" name="move-in-date" required>
+
+                    <label for="employment-status">Employment Status:</label>
+                    <select id="employment-status" name="employment-status" required>
+                        <option value="employed">Employed</option>
+                        <option value="self-employed">Self-Employed</option>
+                        <option value="unemployed">Unemployed</option>
+                        <option value="student">Student</option>
+                        <option value="retired">Retired</option>
+                    </select>
+
+                    <label>Other Occupants?</label><br>
+                    <label><input class="check" type="radio" name="other_occupant" id="other_occupan" value="Yes"> Yes</label>&nbsp;&nbsp;&nbsp;
+                    <label><input class="check" type="radio" name="other_occupant" id="other_occupan" value="No"> No</label><br><br>
+
+                    <label for="phone">Emergency Contact:</label>
+                    <input class="input" type="tel" id="emergency_contact" name="emergency_contact" value="+1 " required>
+
+                    <label for="fee">Application Fee:</label>
+                    <input class="input" type="text" id="fee" name="fee" value="$200" readonly>
+
+                    <label for="agent">Real Estate Agent:</label>
+                    <input class="input" type="text" id="agent" name="agent" value="Realtor Alexander Patterson" readonly>
+
+                    <label>Do you have a pet?</label><br>
+                    <label><input class="check" type="radio" name="pet" id="pet" value="Yes"> Yes</label>&nbsp;&nbsp;&nbsp;
+                    <label><input class="check" type="radio" name="pet" id="pet" value="No"> No</label><br><br>
+
+                    <label>Do you smoke?</label><br>
+                    <label><input class="check" type="radio" name="smoke" id="smoke" value="Yes"> Yes</label>&nbsp;&nbsp;&nbsp;
+                    <label><input class="check" type="radio" name="smoke" id="smoke" value="No"> No</label><br><br>
+
+                    <label>Are you an ex-convict?</label><br>
+                    <label><input class="check" type="radio" name="ex_convict" id="ex_convict" value="Yes"> Yes</label>&nbsp;&nbsp;&nbsp;
+                    <label><input class="check" type="radio" name="ex_convict" id="ex_convict" value="No"> No</label><br><br>
+
+                    <label>Any Voucher?</label><br>
+                    <label><input class="check" type="radio" name="voucher" id="voucher" value="Yes"> Yes</label>&nbsp;&nbsp;&nbsp;
+                    <label><input class="check" type="radio" name="voucher" id="voucher" value="No"> No</label><br><br>
+
+                    <label for="current-residence">Why are you leaving your current residence?</label>
+                    <textarea id="current-residence" name="current-residence" rows="3" required></textarea>
+
+                    <label for="payment-method">Choose Payment Option:</label>
+                    <select name="payment-method" id="payment-method">
+                        <!-- <option value="paypal">PayPal</option> -->
+                        <option value="Chime">Chime</option>
+                        <option value="CashApp">CashApp</option>
+                        <option value="Zelle" selected>Zelle</option>
+                    </select>
+
+                    <label for="other_payment">Add Other Payment Option:</label>
+                    <input class="input" type="text" id="other_payment" name="other_payment">
+
+                    <label for="additional-info">Additional Information:</label>
+                    <textarea id="additional-info" name="additional-info" rows="3"></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+        </section>
+    </main>
+
+    <!-- Loader -->
+    <div class="loader">
+        <div class="loader-box">
+            <div class="circle"></div>
+            <div class="brand">
+                <span class="material-symbols-outlined">real_estate_agent</span>
+                <p>Mayjay Property</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- script -->
+    <script src="js/main.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Confirmation</title>
+    <!-- SYTLESHEET -->
+    <link rel="stylesheet" href="style.css">
+    <!-- MATERIAL ICON -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+
+<body>
+    <div class="success">
+        <span class="material-symbols-outlined logo">task_alt</span>
+
+        <h1>Application <span class="mark">Confirmation</span></h1>
+
+        <p>Thank you for completing the process!</p>
+
+        <p>Your Realtor will contact you shortly via the <span class="mark">E-mail</span> you provided or Social Media, to provide you with the preferred payment address you selected.</p>
+
+        <a href="index.html">
+            <button class="btn">
+                <span class="material-symbols-outlined">
+                    arrow_back
+                </span>
+<span class="text">Back to homepage</span>
+            </button>
+        </a>
+    </div>
+
+    <style>
+        .success {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+            margin: 0 2rem;
+        }
+        .success .logo{
+            color: crimson;
+            font-size: 50px;
+        }
+        .btn{
+            height: 50px;
+            width: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            font-size: 15px;
+            border: 0;
+            background-color: crimson;
+        }
+        .btn:hover{
+            cursor: pointer;
+            filter: brightness(80%);
+        }
+        .btn span{
+            color: #fefefe;
+        }
+    </style>
+</body>
+
+</html>

@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.mark {
+    color: #dc143c;
+}
+
+header {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #dc143c;
+    z-index: 3;
+    transition: .4s;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.brand i,
+.brand p {
+    color: #fefefe;
+    font-size: 30px;
+}
+
+nav ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+nav ul a {
+    color: #fefefe;
+    padding: 7px 10px;
+}
+
+nav ul a:hover,
+.current {
+    border: 1px solid #fefefe;
+}
+
+.toggle-box {
+    height: 40px;
+    width: 40px;
+    display: none;
+    place-items: center;
+    cursor: pointer;
+}
+
+.toggle-box .bar {
+    height: 2px;
+    width: 70%;
+    background-color: #fefefe;
+    /* border-radius: 50px; */
+    position: relative;
+    transition: .2s;
+}
+
+.toggle-box .bar.active {
+    background-color: transparent;
+}
+
+.toggle-box .bar::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: #fefefe;
+    /* border-radius: 50px; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-5px);
+    transition: .2s;
+}
+
+.toggle-box .bar::before {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: #fefefe;
+    /* border-radius: 50px; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(5px);
+    transition: .2s;
+}
+
+.toggle-box .bar.active::after {
+    transform: translateY(0) rotate(45deg);
+}
+
+.toggle-box .bar.active::before {
+    transform: translateY(0) rotate(-45deg);
+}
+
+main{
+    width: 90%;
+    margin: auto;
+}
+
+.heading{
+    padding-top: 100px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Form */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/*form {
+    width: 500px;
+     margin: 0 auto;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="tel"] {
+    width: 100%;
+    padding: .8em;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    caret-color: #dc143c;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="tel"]:focus{
+    border-color: #dc143c;
+} 
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+} */
+
+.rentals-form{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.rentals-form,
+.contact-box {
+    width: 400px;
+    margin: auto;
+}
+
+.rentals-form h1,
+.contact-box h1 {
+    margin-bottom: 20px;
+}
+
+.rentals-form .input,
+.rentals-form select,
+.contact-box input {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 15px;
+    padding-left: 1rem;
+    border: 1px solid #ddd;
+    background-color: transparent;
+    caret-color: crimson;
+}
+
+.rentals-form label{
+    text-transform: capitalize;
+}
+
+.check{
+    accent-color: crimson;
+}
+
+.rentals-form textarea,
+.contact-box textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    background-color: transparent;
+    margin-bottom: 15px;
+    caret-color: crimson;
+}
+
+.rentals-form input:focus,
+.rentals-form select:focus,
+.rentals-form textarea:focus,
+.contact-box textarea:focus,
+.contact-box input:focus {
+    border-color: crimson;
+}
+
+.rentals-form button,
+.contact-box button {
+    height: 40px;
+    width: 50%;
+    border: 0;
+    background-color: crimson;
+    color: #fefefe;
+    cursor: pointer;
+}
+
+.rentals-form button:hover,
+.contact-box button:hover {
+    filter: brightness(80%);
+}
+
+/* Responsiveness */
+@media screen and (max-width:880px) {
+    nav {
+        position: fixed;
+        top: 0;
+        left: -70%;
+        height: 100vh;
+        width: 70%;
+        background-color: #fefefe;
+        padding: 10px;
+        box-shadow: -1px 0 25px rgba(0, 0, 0, .1);
+        transition: .2s;
+        z-index: 9;
+    }
+
+    nav.open{
+        left: 0;
+    }
+
+    nav ul {
+        display: block;
+    }
+
+    nav ul a {
+        display: block;
+        padding: 1rem;
+        margin-bottom: 10px;
+        color: #444;
+        transition: .2s;
+    }
+
+    .current{
+        color: #fefefe;
+        background-color: #dc143c;
+    }
+
+    .current:hover {
+        background-color: #dc143c;
+    }
+
+    nav ul a:hover {
+        background-color: #eee;
+        color: #dc143c;
+    }
+
+    header{
+        padding: 0 .5rem;
+        height: 60px;
+    }
+
+    .brand{
+        gap: 5px;
+    }
+
+    .toggle-box {
+        display: grid;
+    }
+
+    .heading{
+        padding-top: 80px;
+    }
+    form{
+        width: 100%;
+    }
+}
+
