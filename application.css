@@ -243,6 +243,11 @@ input[type="submit"] {
     filter: brightness(80%);
 }
 
+.signatureCanvas {
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
 /* Responsiveness */
 @media screen and (max-width:880px) {
     nav {

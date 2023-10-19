@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application Form</title>
+    <!-- SIGNATURE API -->
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad"></script>
     <!-- SYTLESHEET -->
     <link rel="stylesheet" href="application.css">
     <!-- MATERIAL ICON -->
@@ -77,6 +79,7 @@
             right: 1rem;
             cursor: pointer;
         }
+
 
         @media screen and (max-width:460px) {
             .overlay .modal {
@@ -229,6 +232,9 @@
                     <label for="additional-info">Additional Information:</label>
                     <textarea id="additional-info" name="additional-info" rows="3"></textarea>
 
+                    <label for="signature">Signature</label>
+                    <canvas id="signature-pad" class="signatureCanvas" height=200 style="touch-action: none;"></canvas>
+
                     <button type="submit">Submit</button>
                 </form>
         </section>
@@ -264,6 +270,10 @@
 
     <!-- script -->
     <script src="js/main.js"></script>
+    <script>
+        var canvas = document.getElementById('signature-pad');
+        var signaturePad = new SignaturePad(canvas);
+    </script>
     <script>
         const overlay = document.querySelector(".overlay");
         const closeBtn = document.querySelectorAll(".close-btn");
